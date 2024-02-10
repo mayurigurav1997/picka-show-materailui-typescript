@@ -1,41 +1,41 @@
-import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Box, Hidden, Typography } from "@mui/material";
 import homeIcon from "../../assets/icons/icon-nav-home.svg";
 import movieIcon from "../../assets/icons/icon-nav-movies.svg";
 import tvSeriesIcon from "../../assets/icons/icon-nav-tv-series.svg";
 import bookmarkIcon from "../../assets/icons/icon-nav-bookmark.svg";
-import { Link, useLocation } from "react-router-dom";
-import { Box, Hidden, Typography } from "@mui/material";
 
 const navLinks = [
-    {
-      name: "Home",
-      icon: homeIcon,
-      link: "/home",
-    },
-    {
-      name: "Login",
-      icon: homeIcon,
-      link: "/",
-    },
-    {
-      name: "Movies",
-      icon: movieIcon,
-      link: "/movies",
-    },
-    {
-      name: "TV Series",
-      icon: tvSeriesIcon,
-      link: "/tv-series",
-    },
-    {
-      name: "Bookmarks",
-      icon: bookmarkIcon,
-      link: "/bookmark",
-    },
-  ];
+  {
+    name: "Home",
+    icon: homeIcon,
+    link: "/home",
+  },
+  {
+    name: "Login",
+    icon: homeIcon,
+    link: "/",
+  },
+  {
+    name: "Movies",
+    icon: movieIcon,
+    link: "/movies",
+  },
+  {
+    name: "TV Series",
+    icon: tvSeriesIcon,
+    link: "/tv-series",
+  },
+  {
+    name: "Bookmarks",
+    icon: bookmarkIcon,
+    link: "/bookmarks",
+  },
+];
+
 const Sidebar = () => {
-  
   const { pathname } = useLocation();
+
   return (
     <Box
       sx={{
@@ -78,9 +78,10 @@ const Sidebar = () => {
             fontWeight={400}
             fontSize={18}
           >
-            PikaShow App
+            PikaShowApp
           </Typography>
         </Hidden>
+
         <Box
           sx={{
             py: {
